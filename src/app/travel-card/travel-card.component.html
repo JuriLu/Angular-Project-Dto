@@ -1,1 +1,107 @@
-<p>travel-card works!</p>
+<div class="body">
+  <div class="container">
+
+    <mat-card>
+      <mat-card-title>Vehicles</mat-card-title>
+      <mat-card-content>
+        <mat-list role="list" *ngFor="let vehicle of Vehicles">
+
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Model :</span>  {{vehicle.model}}
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Year :</span> {{vehicle.year}}
+          </mat-list-item>
+          <hr>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Drivers</mat-card-title>
+      <mat-card-content>
+        <mat-list role="list" *ngFor="let driver of Drivers">
+
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Name :</span>  {{driver.name}}
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Class :</span> {{driver.licenseType}}
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">EXPIRATION Year :</span> {{driver.licenseExpDate}}
+          </mat-list-item>
+          <hr>
+
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Passengers</mat-card-title>
+      <mat-card-content>
+        <mat-list role="list" *ngFor="let passenger of Passengers">
+
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">First Name :</span>  {{passenger.firstName}}
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Last Name :</span> {{passenger.lastName}}
+          </mat-list-item>
+          <mat-list-item role="listitem">
+            <span style="font-weight: bold">Age :</span> {{passenger.age}}
+          </mat-list-item>
+          <hr>
+
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-title>Travels</mat-card-title>
+      <h3>Details</h3>
+      <mat-card-content>
+        <mat-list role="list" *ngFor="let travel of Travels">
+
+          <div class="Travel Cards">
+            <h3>Driver Details</h3>
+            <mat-list-item role="listitem">
+              <br>
+              <span style="font-weight: bold">First Name :</span>  {{travel.driver.name}}
+              <span class="breath-space"
+                    style="font-weight: bold">License Type :</span>  {{travel.driver.licenseType | uppercase}}
+              <span class="breath-space"
+                    style="font-weight: bold">License Exp Date :</span>  {{travel.driver.licenseExpDate}}
+            </mat-list-item>
+          </div>
+
+          <div class="Travel Cards">
+            <h3>Passenger Details</h3>
+            <mat-list-item role="listitem">
+              <span style="font-weight: bold">First Name :</span> {{travel.passenger.firstName}}
+              <span class="breath-space" style="font-weight: bold">Last Name :</span> {{travel.passenger.lastName}}
+              <span class="breath-space" style="font-weight: bold">Age :</span> {{travel.passenger.age}}
+            </mat-list-item>
+          </div>
+
+          <div class="Travel Cards">
+            <h3>Vehicle Details</h3>
+            <mat-list-item role="listitem">
+              <span style="font-weight: bold">Model :</span> {{travel.vehicle.model}}
+              <span class="breath-space" style="font-weight: bold">Year :</span> {{travel.vehicle.year}}
+            </mat-list-item>
+          </div>
+
+          <div class="Travel Cards">
+            <mat-list-item role="listitem">
+              <span style="font-weight: bold">Travel Distance :</span> {{travel.travelDistance}} km
+            </mat-list-item>
+          </div>
+
+          <hr>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>
