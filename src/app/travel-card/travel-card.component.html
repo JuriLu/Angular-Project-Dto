@@ -1,107 +1,293 @@
+<!--<div class="container">-->
+
+<!--  <mat-card>-->
+<!--    <mat-card-title>Vehicles</mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <mat-list role="list" *ngFor="let vehicle of Vehicles">-->
+
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Model :</span>  {{vehicle.model}}-->
+<!--        </mat-list-item>-->
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Year :</span> {{vehicle.year}}-->
+<!--        </mat-list-item>-->
+<!--        <hr>-->
+<!--      </mat-list>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+
+<!--  <mat-card>-->
+<!--    <mat-card-title>Drivers</mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <mat-list role="list" *ngFor="let driver of Drivers">-->
+
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Name :</span>  {{driver.name}}-->
+<!--        </mat-list-item>-->
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Class :</span> {{driver.licenseType}}-->
+<!--        </mat-list-item>-->
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">EXPIRATION Year :</span> {{driver.licenseExpDate}}-->
+<!--        </mat-list-item>-->
+<!--        <hr>-->
+
+<!--      </mat-list>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+
+<!--  <mat-card>-->
+<!--    <mat-card-title>Passengers</mat-card-title>-->
+<!--    <mat-card-content>-->
+<!--      <mat-list role="list" *ngFor="let passenger of Passengers">-->
+
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">First Name :</span>  {{passenger.firstName}}-->
+<!--        </mat-list-item>-->
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Last Name :</span> {{passenger.lastName}}-->
+<!--        </mat-list-item>-->
+<!--        <mat-list-item role="listitem">-->
+<!--          <span style="font-weight: bold">Age :</span> {{passenger.age}}-->
+<!--        </mat-list-item>-->
+<!--        <hr>-->
+
+<!--      </mat-list>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+
+<!--  <mat-card>-->
+<!--    <mat-card-title>Travels</mat-card-title>-->
+<!--    <h3>Details</h3>-->
+<!--    <mat-card-content>-->
+<!--      <mat-list role="list" *ngFor="let travel of Travels">-->
+
+<!--        <div class="Travel Cards">-->
+<!--          <h3>Driver Details</h3>-->
+<!--          <mat-list-item role="listitem">-->
+<!--            <br>-->
+<!--            <span style="font-weight: bold">First Name :</span>  {{travel.driver.name}}-->
+<!--            <span class="breath-space"-->
+<!--                  style="font-weight: bold">License Type :</span>  {{travel.driver.licenseType | uppercase}}-->
+<!--            <span class="breath-space"-->
+<!--                  style="font-weight: bold">License Exp Date :</span>  {{travel.driver.licenseExpDate}}-->
+<!--          </mat-list-item>-->
+<!--        </div>-->
+
+<!--        <div class="Travel Cards">-->
+<!--          <h3>Passenger Details</h3>-->
+<!--          <mat-list-item role="listitem">-->
+<!--            <span style="font-weight: bold">First Name :</span> {{travel.passenger.firstName}}-->
+<!--            <span class="breath-space" style="font-weight: bold">Last Name :</span> {{travel.passenger.lastName}}-->
+<!--            <span class="breath-space" style="font-weight: bold">Age :</span> {{travel.passenger.age}}-->
+<!--          </mat-list-item>-->
+<!--        </div>-->
+
+<!--        <div class="Travel Cards">-->
+<!--          <h3>Vehicle Details</h3>-->
+<!--          <mat-list-item role="listitem">-->
+<!--            <span style="font-weight: bold">Model :</span> {{travel.vehicle.model}}-->
+<!--            <span class="breath-space" style="font-weight: bold">Year :</span> {{travel.vehicle.year}}-->
+<!--          </mat-list-item>-->
+<!--        </div>-->
+
+<!--        <div class="Travel Cards">-->
+<!--          <mat-list-item role="listitem">-->
+<!--            <span style="font-weight: bold">Travel Distance :</span> {{travel.travelDistance}} km-->
+<!--          </mat-list-item>-->
+<!--        </div>-->
+
+<!--        <hr>-->
+<!--      </mat-list>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+
+<!--</div>-->
+
+
 <div class="body">
-  <div class="container">
-
-    <mat-card>
-      <mat-card-title>Vehicles</mat-card-title>
-      <mat-card-content>
-        <mat-list role="list" *ngFor="let vehicle of Vehicles">
-
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Model :</span>  {{vehicle.model}}
-          </mat-list-item>
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Year :</span> {{vehicle.year}}
-          </mat-list-item>
-          <hr>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>Drivers</mat-card-title>
-      <mat-card-content>
-        <mat-list role="list" *ngFor="let driver of Drivers">
-
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Name :</span>  {{driver.name}}
-          </mat-list-item>
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Class :</span> {{driver.licenseType}}
-          </mat-list-item>
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">EXPIRATION Year :</span> {{driver.licenseExpDate}}
-          </mat-list-item>
-          <hr>
-
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>Passengers</mat-card-title>
-      <mat-card-content>
-        <mat-list role="list" *ngFor="let passenger of Passengers">
-
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">First Name :</span>  {{passenger.firstName}}
-          </mat-list-item>
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Last Name :</span> {{passenger.lastName}}
-          </mat-list-item>
-          <mat-list-item role="listitem">
-            <span style="font-weight: bold">Age :</span> {{passenger.age}}
-          </mat-list-item>
-          <hr>
-
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <mat-card-title>Travels</mat-card-title>
-      <h3>Details</h3>
-      <mat-card-content>
-        <mat-list role="list" *ngFor="let travel of Travels">
-
-          <div class="Travel Cards">
-            <h3>Driver Details</h3>
-            <mat-list-item role="listitem">
-              <br>
-              <span style="font-weight: bold">First Name :</span>  {{travel.driver.name}}
-              <span class="breath-space"
-                    style="font-weight: bold">License Type :</span>  {{travel.driver.licenseType | uppercase}}
-              <span class="breath-space"
-                    style="font-weight: bold">License Exp Date :</span>  {{travel.driver.licenseExpDate}}
-            </mat-list-item>
+  <section class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center mb-5 mt-3">
+          <h1 class="display-4">Ikub Travel Agency</h1>
+          <p class="lead">Basic information for the travels </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-white card-has-bg click-col"
+               style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"
+                 alt="IMG">
+            <div class="card-img-overlay d-flex flex-column">
+              <h2 class="card-meta mb-2">Vehicles</h2>
+              <div class="card-body" *ngFor="let vehicle of Vehicles">
+                <h4 class="card-title mt-0 "><a class="text-white">{{vehicle.model}}</a></h4>
+                <small><i class="far fa-clock"></i> {{vehicle.year}}</small>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-white card-has-bg click-col"
+               style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature"
+                 alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+              <h2 class="card-meta mb-2">Drivers</h2>
+              <div class="card-body" *ngFor="let driver of Drivers">
 
-          <div class="Travel Cards">
-            <h3>Passenger Details</h3>
-            <mat-list-item role="listitem">
-              <span style="font-weight: bold">First Name :</span> {{travel.passenger.firstName}}
-              <span class="breath-space" style="font-weight: bold">Last Name :</span> {{travel.passenger.lastName}}
-              <span class="breath-space" style="font-weight: bold">Age :</span> {{travel.passenger.age}}
-            </mat-list-item>
+                <h4 class="card-title mt-0 "><a class="text-white" herf="#"></a>
+                  <span style="padding-left: 5px">{{driver.name}}</span>
+                  <span style="padding-left: 25px">{{driver.licenseType}}</span>
+                  <span style="padding-left: 50px">{{driver.licenseExpDate}}</span>
+                </h4>
+                <small><i class="far fa-clock"></i>
+                  <span style="padding-left: 5px">Name</span>
+                  <span style="padding-left: 25px">License </span>
+                  <span style="padding-left: 25px">Exp. Date</span>
+                </small>
+
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+          <div class="card text-white card-has-bg click-col"
+               style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design"
+                 alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+              <h2 class="card-meta mb-2">Passengers</h2>
+              <div class="card-body" *ngFor="let passenger of Passengers">
 
-          <div class="Travel Cards">
-            <h3>Vehicle Details</h3>
-            <mat-list-item role="listitem">
-              <span style="font-weight: bold">Model :</span> {{travel.vehicle.model}}
-              <span class="breath-space" style="font-weight: bold">Year :</span> {{travel.vehicle.year}}
-            </mat-list-item>
+                <h4 class="card-title mt-0 "><a class="text-white" herf="#"></a>
+                  <span style="padding-left: 5px">{{passenger.firstName}}</span>
+                  <span style="padding-left: 25px">{{passenger.lastName}}</span>
+                  <span style="padding-left: 50px">{{passenger.age}}</span>
+                </h4>
+                <small><i class="far fa-clock"></i>
+                  <span style="padding-left: 5px">First Name</span>
+                  <span style="padding-left: 25px">Last Name </span>
+                  <span style="padding-left: 25px">Age</span>
+                </small>
+
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="Travel Cards">
-            <mat-list-item role="listitem">
-              <span style="font-weight: bold">Travel Distance :</span> {{travel.travelDistance}} km
-            </mat-list-item>
+        <!--        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">-->
+        <!--          <div class="card text-white card-has-bg click-col"-->
+        <!--               style="background-image:url('https://source.unsplash.com/600x900/?tech,street');">-->
+        <!--            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tech,street"-->
+        <!--                 alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">-->
+        <!--            <div class="card-img-overlay d-flex flex-column">-->
+        <!--              <div class="card-body">-->
+        <!--                <h2 class="card-meta mb-2">Travels</h2>-->
+        <!--                <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur-->
+        <!--                  dipisi?</a></h4>-->
+        <!--                <small><i class="far fa-clock"></i> October 15, 2020</small>-->
+        <!--              </div>-->
+        <!--              <div class="card-footer">-->
+        <!--                <div class="media">-->
+        <!--                  <img class="mr-3 rounded-circle"-->
+        <!--                       src="https://assets.codepen.io/460692/internal/avatars/users/default.png"-->
+        <!--                       alt="Generic placeholder image" style="max-width:50px">-->
+        <!--                  <div class="media-body">-->
+        <!--                    <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>-->
+        <!--                    <small>Director of UI/UX</small>-->
+        <!--                  </div>-->
+        <!--                </div>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4 ">
+          <div class="card text-white card-has-bg click-col customJJ"
+               style="background-image:url('https://source.unsplash.com/600x900/?tree,nature');">
+            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?tree,nature"
+                 alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
+            <div class="card-img-overlay d-flex flex-column">
+
+              <h1 class="card-meta mb-2">Travel Details</h1>
+              <div class="row">
+                <div class="card-body" *ngFor="let travel of Travels">
+
+                  <div class="col-md-6">
+                    <h2 class="card-meta mb-2">Driver Details</h2>
+                    <h4 class="card-title mt-0 "><a class="text-white" herf="#"></a>
+                      <span style="padding-left: 5px">{{travel.driver.name}}</span>
+                      <span style="padding-left: 25px">{{travel.driver.licenseType}}</span>
+                      <span style="padding-left: 50px">{{travel.driver.licenseExpDate}}</span>
+                    </h4>
+                    <small><i class="far fa-clock"></i>
+                      <span style="padding-left: 5px">Name</span>
+                      <span style="padding-left: 25px">License </span>
+                      <span style="padding-left: 25px">Exp. Date</span>
+                    </small>
+                  </div>
+
+                  <div class="col-md-6">
+                    <h2 class="card-meta mb-2 mt-3">Passenger Details</h2>
+                    <h4 class="card-title mt-0 "><a class="text-white" herf="#"></a>
+                      <span style="padding-left: 5px">{{travel.passenger.firstName}}</span>
+                      <span style="padding-left: 25px">{{travel.passenger.lastName}}</span>
+                      <span style="padding-left: 50px">{{travel.passenger.age}}</span>
+                    </h4>
+                    <small><i class="far fa-clock"></i>
+                      <span style="padding-left: 5px">First Name</span>
+                      <span style="padding-left: 25px">Last Name </span>
+                      <span style="padding-left: 25px">Age</span>
+                    </small>
+                  </div>
+
+                  <div class="col-md-6">
+                    <h2 class="card-meta mb-2 mt-3">Vehicle Details</h2>
+                    <h4 class="card-title mt-0 "><a class="text-white" herf="#"></a>
+                      <span style="padding-left: 5px">{{travel.vehicle.model}}</span>
+                      <span style="padding-left: 25px">{{travel.vehicle.year}}</span>
+                    </h4>
+                    <small><i class="far fa-clock"></i>
+                      <span style="padding-left: 5px">Model</span>
+                      <span style="padding-left: 25px">Year </span>
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <!--        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">-->
+        <!--          <div class="card text-white card-has-bg click-col"-->
+        <!--               style="background-image:url('https://source.unsplash.com/600x900/?computer,design');">-->
+        <!--            <img class="card-img d-none" src="https://source.unsplash.com/600x900/?computer,design"-->
+        <!--                 alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">-->
+        <!--            <div class="card-img-overlay d-flex flex-column">-->
+        <!--              <div class="card-body">-->
+        <!--                <small class="card-meta mb-2">Thought Leadership</small>-->
+        <!--                <h4 class="card-title mt-0 "><a class="text-white" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur-->
+        <!--                  dipisi?</a></h4>-->
+        <!--                <small><i class="far fa-clock"></i> October 15, 2020</small>-->
+        <!--              </div>-->
+        <!--              <div class="card-footer">-->
+        <!--                <div class="media">-->
+        <!--                  <img class="mr-3 rounded-circle"-->
+        <!--                       src="https://assets.codepen.io/460692/internal/avatars/users/default.png"-->
+        <!--                       alt="Generic placeholder image" style="max-width:50px">-->
+        <!--                  <div class="media-body">-->
+        <!--                    <h6 class="my-0 text-white d-block">Oz Coruhlu</h6>-->
+        <!--                    <small>Director of UI/UX</small>-->
+        <!--                  </div>-->
+        <!--                </div>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
 
-          <hr>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
+      </div>
 
-  </div>
+    </div>
+  </section>
 </div>
