@@ -19,11 +19,16 @@ export class TravelCardComponent implements OnInit {
 
   Vehicles: vehicle[] = [
     {model:'Mercedes',year:2022},
-    {model:'Audi',year:2022},
+    {model:'Audi',year:2020},
+    {model:'Volkswagen',year:2015},
+    {model:'Bmw',year:2016},
+
   ]
 
   Drivers: driver[] = [
-    {name:'Hamilton',licenseType:'D',licenseExpDate:'20-05-2030'},
+    {name:'John',licenseType:'D',licenseExpDate:'20-05-2030'},
+    {name:'Jost',licenseType:'C',licenseExpDate:'16-09-2035'},
+    {name:'Max',licenseType:'C',licenseExpDate:'28-02-2035'},
   ]
 
   Passengers: passenger[] = [
